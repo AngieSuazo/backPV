@@ -29,7 +29,7 @@ export const registerSchema = z.object({
       message: "Revise el campo de DNI (Solo números)",
     })
     .length(8, {
-      message: "EL DNI debe tener 8 dígitos",
+      message: "El DNI debe tener 8 dígitos",
     }),
 
   role: z
@@ -107,7 +107,7 @@ export const registerSchema = z.object({
     .date({
       required_error: "La fecha de nacimiento es requerida",
     })
-    .min(new Date("1930-01-01"), {
+    .min(new Date("1900-01-01"), {
       message: "Como sigues vivo?",
     })
     .max(new Date("2005-01-01"), {

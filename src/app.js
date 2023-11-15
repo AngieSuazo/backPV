@@ -4,7 +4,8 @@ import cookieParser from "cookie-parser";
 
 import authRoutes from "./routes/auth.routes.js";
 import taskRoutes from "./routes/tasks.routes.js";
-import turnoRoutes from "./routes/turnos.routes.js";
+import turnoRoutes from "./routes/turnos.routes.js"
+import visitaRoutes from "./routes/visitas.routes.js";
 import cors from "cors";
 
 const app = express();
@@ -25,5 +26,6 @@ app.use(cors(corsOptions));
 app.use("/api", authRoutes);
 app.use("/api", taskRoutes);
 app.use("/api", turnoRoutes);
+app.use("/api", visitaRoutes);
 
 export default app;

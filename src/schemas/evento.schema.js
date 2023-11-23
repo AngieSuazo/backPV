@@ -7,7 +7,7 @@ export const createSchema = z.object({
         required_error: "Los datos de los visitantes son requeridos",
       })      
     .or(z.string().url({
-        message: "Debe ser una URL válida o un string representando un archivo."
+        message: "Debe ser una URL válida que apunte al archivo."
       })),
   ]),
     

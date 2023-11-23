@@ -20,6 +20,8 @@ import cajaRoutes from "./routes/caja.routes.js";
 
 import guiaRoutes from "./routes/guia.routes.js";
 
+import visitanteRoutes from "./routes/visitante.routes.js";
+
 import cors from "cors";
 
 const app = express();
@@ -49,5 +51,7 @@ app.use(paymentRoutes);
 app.use("/api", cajaRoutes);
 
 app.use("/api", guiaRoutes);
+
+app.use("/api", visitanteRoutes)
 
 export default app;

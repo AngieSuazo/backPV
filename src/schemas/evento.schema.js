@@ -5,9 +5,10 @@ export const createSchema = z.object({
   .union([
     z.string({
         required_error: "Los datos de los visitantes son requeridos",
-      }),
-      
-    z.instanceOf(File) // Esto asume que estás trabajando en un entorno de navegador
+      })      
+    .or(z.string().url({
+        message: "Debe ser una URL válida o un string representando un archivo."
+      })),
   ]),
     
   turno: z

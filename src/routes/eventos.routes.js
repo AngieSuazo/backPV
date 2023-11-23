@@ -1,4 +1,8 @@
 import { Router } from "express";
+import {
+    createEvento,
+    getEvento,
+  } from "../controllers/eventos.controller.js";
 
 import { authRequired } from "../middlewares/validateToken.js";
 import { validateSchema } from "../middlewares/validatorMiddleware.js";

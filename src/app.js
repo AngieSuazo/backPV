@@ -17,15 +17,9 @@ import circuitoRoutes from "./routes/circuitos.routes.js";
 import cajaRoutes from "./routes/caja.routes.js";
 
 import guiaRoutes from "./routes/guia.routes.js";
-<<<<<<< HEAD
 import eventoRoutes from "./routes/eventos.routes.js";
-=======
 
-<<<<<<< HEAD
->>>>>>> 72da49c4e3d33e0dc35e02fab1a59e6e344793a8
->>>>>>> fa71e81da77423ccee4199fdf86f7731f5da294d
-=======
->>>>>>> dedada704dbfbc887628c7362e17a8ae9ea268e6
+
 import cors from "cors";
 
 const app = express();

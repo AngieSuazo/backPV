@@ -5,6 +5,15 @@ import cookieParser from "cookie-parser";
 import authRoutes from "./routes/auth.routes.js";
 import taskRoutes from "./routes/tasks.routes.js";
 import turnoRoutes from "./routes/turnos.routes.js";
+<<<<<<< HEAD
+import circuitoRoutes from "./routes/circuitos.routes.js";
+=======
+
+import cajaRoutes from "./routes/caja.routes.js";
+
+import guiaRoutes from "./routes/guia.routes.js";
+
+>>>>>>> 72da49c4e3d33e0dc35e02fab1a59e6e344793a8
 import reservaRoutes from "./routes/reserva.routes.js";
 import boteRoutes from "./routes/bote.routes.js";
 import grupoRoutes from "./routes/grupo.routes.js";
@@ -28,8 +37,5 @@ app.use(cors(corsOptions));
 app.use("/api", authRoutes);
 app.use("/api", taskRoutes);
 app.use("/api", turnoRoutes);
-app.use('/api', reservaRoutes);
-app.use('/api', boteRoutes);
-app.use('/api', grupoRoutes);
 
 export default app;

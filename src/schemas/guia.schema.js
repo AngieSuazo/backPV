@@ -21,16 +21,14 @@ export const createGuiaSchema = z.object({
 
     imagen: z
     .string({
-      required_error: "La hora de fin es requerida",
+      required_error: "La foto es requerida",
     })
     .min(1, {
-      message: "La hora de fin es requerida",
-    })
-    .regex(new RegExp(/^(0[0-9]|1[0-2]):[0-5][0-9]\s[APap][Mm]$/), {
-      message: "Revise el campo de hora de fin (Solo numeros)",
+      message: "La foto es requerida",
     }),
+    
     fecha_nacimiento: z
-    .date({
+    .string({
         required_error: "La fecha de nacimiento es requerida",
       })
       .min(new Date("1900-01-01"), {

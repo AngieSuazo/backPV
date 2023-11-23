@@ -4,7 +4,7 @@ import {
 } from "../controllers/guia.controller.js";
 import { authRequired } from "../middlewares/validateToken.js";
 import { validateSchema } from "../middlewares/validatorMiddleware.js";
-import createGuiaSchema from "../schemas/guia.schema.js";
+import {createGuiaSchema } from "../schemas/guia.schema.js";
 
 const router = Router();
 

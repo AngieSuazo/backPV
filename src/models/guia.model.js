@@ -18,7 +18,7 @@ const GuiaSchema = new mongoose.Schema(
         required: true,
       },
       fecha_nacimiento: {
-        type: Date,
+        type: String,
       },
       dni: {
         type: Number,

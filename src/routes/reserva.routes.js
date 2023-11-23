@@ -14,7 +14,7 @@ const router = Router();
 
 router.get("/reservas", authRequired, getReservas);
 router.get("/reservas/:id", authRequired, getReserva);
-router.post("/reservas", [authRequired, validateSchema(createSchema)], createReserva);
+router.post("/reservas",[authRequired, validateSchema(createSchema)], createReserva);
 router.delete("/reservas/:id", authRequired, deleteReserva);
 router.put("/reservas/:id", authRequired, updateReserva);
 

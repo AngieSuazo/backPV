@@ -6,6 +6,7 @@ import authRoutes from "./routes/auth.routes.js";
 import taskRoutes from "./routes/tasks.routes.js";
 import turnoRoutes from "./routes/turnos.routes.js";
 import reservaRoutes from "./routes/reserva.routes.js";
+import boteRoutes from "./routes/bote.routes.js";
 import cors from "cors";
 
 const app = express();
@@ -27,5 +28,6 @@ app.use("/api", authRoutes);
 app.use("/api", taskRoutes);
 app.use("/api", turnoRoutes);
 app.use('/api', reservaRoutes);
+app.use('/api', boteRoutes);
 
 export default app;

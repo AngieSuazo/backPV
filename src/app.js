@@ -5,6 +5,7 @@ import cookieParser from "cookie-parser";
 import authRoutes from "./routes/auth.routes.js";
 import taskRoutes from "./routes/tasks.routes.js";
 import turnoRoutes from "./routes/turnos.routes.js";
+import guiaRoutes from "./routes/guia.routes.js";
 import eventoRoutes from "./routes/eventos.routes.js";
 import cors from "cors";
 
@@ -26,6 +27,7 @@ app.use(cors(corsOptions));
 app.use("/api", authRoutes);
 app.use("/api", taskRoutes);
 app.use("/api", turnoRoutes);
+app.use("/api", guiaRoutes);
 app.use("/api", eventoRoutes);
 
 export default app;

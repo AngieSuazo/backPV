@@ -2,6 +2,8 @@ import express from "express";
 import morgan from "morgan";
 import cookieParser from "cookie-parser";
 
+import paymentRoutes from "./routes/payment.routes.js";
+
 import authRoutes from "./routes/auth.routes.js";
 import taskRoutes from "./routes/tasks.routes.js";
 import turnoRoutes from "./routes/turnos.routes.js";
@@ -45,7 +47,7 @@ app.use('/api', reservaRoutes);
 app.use('/api', boteRoutes);
 app.use('/api', grupoRoutes);
 app.use("/api", circuitoRoutes);
-
+app.use(paymentRoutes);
 app.use("/api", cajaRoutes);
 
 app.use("/api", guiaRoutes);

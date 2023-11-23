@@ -5,6 +5,18 @@ const turnoSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  revertir: {
+    type: Boolean,
+    required: true,
+  },
+  excludedDates: {
+    type: [String],
+    required: true,
+  },
+  enUso: {
+    type: Boolean,
+    required: true,
+  },
   activo: {
     type: Boolean,
     required: true,

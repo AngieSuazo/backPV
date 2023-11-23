@@ -3,7 +3,7 @@ import Evento from "../models/eventos.model.js";
 export const createEvento = async (req, res) => {
   const { visitantes, turno, bote } = req.body;
 
-  const newTurno = new Evento({
+  const newEvento = new Evento({
     visitantes,
     turno,
     bote

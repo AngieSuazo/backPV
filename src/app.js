@@ -18,6 +18,9 @@ import cajaRoutes from "./routes/caja.routes.js";
 
 import guiaRoutes from "./routes/guia.routes.js";
 
+
+import clienteRoutes from "./routes/cliente.routes.js";
+
 import cors from "cors";
 
 const app = express();
@@ -38,14 +41,12 @@ app.use(cors(corsOptions));
 app.use("/api", authRoutes);
 app.use("/api", taskRoutes);
 app.use("/api", turnoRoutes);
-
 app.use('/api', reservaRoutes);
 app.use('/api', boteRoutes);
 app.use('/api', grupoRoutes);
 app.use("/api", circuitoRoutes);
-
 app.use("/api", cajaRoutes);
-
 app.use("/api", guiaRoutes);
+app.use("/api", clienteRoutes);
 
 export default app;

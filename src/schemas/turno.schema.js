@@ -6,7 +6,7 @@ export const createSchema = z.object({
       required_error: "El nombre es requerido",
     })
     .max(20, {
-      message: "El nomnbre de turno debe tener máximo 20 caracteres",
+      message: "El nombre de turno debe tener máximo 20 caracteres",
     }),
 
   horaDesde: z

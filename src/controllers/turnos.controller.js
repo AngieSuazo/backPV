@@ -61,7 +61,7 @@ export const getTurnos = async (req, res) => {
 };
 
 export const createTurno = async (req, res) => {
-  const { nombre, activo, horaDesde, horaHasta } = req.body;
+  const { nombre, horaDesde, horaHasta } = req.body;
 
   const newTurno = new Turno({
     nombre,

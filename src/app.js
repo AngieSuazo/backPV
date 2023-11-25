@@ -45,7 +45,7 @@ app.use('/api', reservaRoutes);
 app.use('/api', boteRoutes);
 app.use('/api', grupoRoutes);
 app.use("/api", circuitoRoutes);
-app.use(paymentRoutes);
+app.use("/api",paymentRoutes);
 app.use("/api", cajaRoutes);
 
 app.use("/api", guiaRoutes);

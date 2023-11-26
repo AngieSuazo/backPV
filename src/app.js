@@ -20,6 +20,8 @@ import guiaRoutes from "./routes/guia.routes.js";
 import eventoRoutes from "./routes/eventos.routes.js";
 
 
+import visitanteRoutes from "./routes/visitante.routes.js";
+
 import cors from "cors";
 
 const app = express();
@@ -50,5 +52,7 @@ app.use("/api", cajaRoutes);
 
 app.use("/api", guiaRoutes);
 app.use("/api", eventoRoutes);
+
+app.use("/api", visitanteRoutes)
 
 export default app;

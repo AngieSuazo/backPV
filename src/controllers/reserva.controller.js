@@ -1,4 +1,38 @@
 import Reserva from "../models/reserva.model.js";
+import detalleReserva from "../models/detalleReserva.js";
+
+export const  registrarReserva= async function(req,res){
+    if(req.user){
+        let data= req.body
+        console.log(req)
+        let reserva= await Reserva.create(data)
+        res.status(200).send(reserva)
+
+        
+    }else{
+        res.status(500).send({data:undefined,message:'Error Token'})
+    }
+}
+export const getReservaByCliente = async function(req,res){
+    if(req.user){
+        let reserva= await Reserva.find({cliente: req.user.sub}).populate('cliente')
+        res.status(200).send(reserva)
+    }else{
+        res.status(500).send({data:undefined,message:'Error Token'})
+    }
+}
+export const getDetalleReservaByCliente= async function(req,res){
+    if(req.user){
+        let id= req.params['id'];
+        let reserva= await Reserva.findById({_id:id}).populate('cliente')
+        let detalleReserva= await detalleReserva.find({venta:id}).populate('circuito')
+        res.status(200).send({reserva,detalleReserva});
+    }
+    else{
+        res.status(500).send({data: undefined, message:'Error token'})
+    }
+}
+
 
 export const getReservas = async (req, res) => {
     const reservas = await Reserva.find();
@@ -6,12 +40,12 @@ export const getReservas = async (req, res) => {
 };
 
 export const createReserva = async (req, res) => {
-  const { nombrec, telefono, cantidad} = req.body;
+  const { fechaReserva, estado, total} = req.body;
 
   const newReserva = new Reserva({
-    nombrec,
-    telefono,
-    cantidad
+    fechaReserva,
+    estado,
+    total
   });
 
   const savedReserva = await newReserva.save();
@@ -25,9 +59,9 @@ export const getReserva = async (req, res) => {
 
   res.json({
     _id: reserva._id,
-    nombrec: reserva.nombrec,
-    telefono: reserva.telefono,
-    cantidad: reserva.cantidad,
+    fechaReserva: reserva.fechaReserva,
+    estado: reserva.estado,
+    total: reserva.total,
   });
 };
 

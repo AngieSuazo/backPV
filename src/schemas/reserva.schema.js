@@ -1,31 +1,19 @@
 import { z } from "zod";
 
 export const createSchema = z.object({
-  nombrec: z
+  fechaReserva: z
     .string({
-      required_error: "El nombre completo es requerido",
-    })
-    .max(20, {
-      message: "El nomnbre debe tener máximo 25 caracteres",
+      required_error: "La fecha de la reserva es requerida",
     }),
 
-    celular: z
+    estado: z
     .string({
-      required_error: "Un numero celular es requerido",
-    })
-    .regex(new RegExp(/^[0-9]+$/), {
-      message: "Revise el campo de Celular (Solo números)",
-    })
-    .length(9, {
-      message: "El celular debe tener 9 dígitos",
+      required_error: "El estado es requerido",
     }),
 
-    cantidad: z
-    .string({
-      required_error: "Un numero de cantidad es requerido",
-    })
-    .regex(new RegExp(/^[0-9]+$/), {
-      message: "Revise el campo de Cantidad (Solo números)",
+    total: z
+    .number({
+      required_error: "El total es requerido",
     })
 });
 

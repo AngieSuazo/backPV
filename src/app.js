@@ -9,7 +9,6 @@ import turnoRoutes from "./routes/turnos.routes.js";
 import reservaRoutes from "./routes/reserva.routes.js";
 
 
-import reservaRoutes from "./routes/reserva.routes.js";
 import boteRoutes from "./routes/bote.routes.js";
 import grupoRoutes from "./routes/grupo.routes.js";
 

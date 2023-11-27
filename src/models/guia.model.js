@@ -15,7 +15,6 @@ const GuiaSchema = new mongoose.Schema(
       },
       imagen: {
         type: String,
-        required: true,
       },
       fecha_nacimiento: {
         type: String,

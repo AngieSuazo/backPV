@@ -16,16 +16,8 @@ export const createGuiaSchema = z.object({
         message: "El Apellido es requerido",
       })
       .regex(new RegExp(/^[a-zA-ZñÑ]+$/), {
-        message: "Revise el campo de Apellido Materno (Solo letras)",
+        message: "Revise el campo de Apellido (Solo letras)",
       }),
-
-    imagen: z
-    .string({
-      required_error: "La foto es requerida",
-    })
-    .min(1, {
-      message: "La foto es requerida",
-    }),
     
     fecha_nacimiento: z
     .string({

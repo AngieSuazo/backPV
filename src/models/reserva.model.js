@@ -1,21 +1,36 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
-const reservaSchema = new mongoose.Schema({
-      nombrec: {
-        type: String,
-        required: true,
-      },
-      telefono: {
-        type: Number,
-        required: true,
-        unique: true,
-        trim: true,
-      },
-      cantidad: {
-        type: Number,
-        required: true,
-      },
+
+const reservaSchema = new mongoose.Schema(
+    {
+    cliente: {
+        type: mongoose.Schema.ObjectId,
+        ref:'users',
+        require:true,
+        
+    },
+    fechaReserva: {
+        type: Date,
+        require:true,
+    },
+    
+    turnos: {
+        type: mongoose.Schema.ObjectId,
+        ref: 'turnos',
+        require:true,
+    },
+    estado:{
+        type:Boolean,
+        require:true
+    },
+    total:{
+        type:Number
+    }
+
 
 });
 
-export default mongoose.model("Reserva", reservaSchema);
+export default mongoose.model('reservas', reservaSchema);
+
+
+
